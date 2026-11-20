@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Lora:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth}
 body{margin:0; background:#F6F8FC}
@@ -272,6 +272,64 @@ body{background:#E7ECF5 radial-gradient(circle at 20% 0%, #F3F6FB 0, transparent
   .bk-divider{margin:14px 0 12px}
   .bk-parklist{gap:6px}
 }
+
+/* ===== HCMUT brand theme: violet #42018A, periwinkle #5772CB, white, diagonal stripes ===== */
+:root{
+  --blue:#42018A; --blue-deep:#2E0166; --gold:#5772CB;
+  --ink:#1A0B3B; --mist:#F1F3FC; --line:#CBD3F0; --paper:#FFFFFF; --bg:#F3F4FA;
+  --ok:#00A86B; --warn:#5772CB;
+}
+body{background:#E9ECF8}
+.bk-card{z-index:0; border:1px solid #CBD3F0; border-top:1px solid #CBD3F0;
+  padding:100px 44px 58px; box-shadow:0 20px 50px -22px rgba(66,1,138,.35)}
+.bk-card::after,.bk-corner{display:none}
+.bk-card::before{content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 80%22 preserveAspectRatio=%22none%22%3E%3Cpolygon points=%22250,0 600,0 600,56%22 fill=%22%2342018A%22/%3E%3Cpolygon points=%220,26 600,74 600,92 0,44%22 fill=%22%235772CB%22/%3E%3Cpolygon points=%220,56 230,76 230,88 0,68%22 fill=%22%235772CB%22/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 44%22 preserveAspectRatio=%22none%22%3E%3Cpolygon points=%220,10 260,30 260,44 0,44%22 fill=%22%235772CB%22/%3E%3Cpolygon points=%220,26 360,44 0,44%22 fill=%22%2342018A%22/%3E%3Cpolygon points=%22420,44 600,12 600,44%22 fill=%22%2342018A%22/%3E%3C/svg%3E"); background-repeat:no-repeat;
+  background-position:top left,bottom left; background-size:100% 80px,100% 44px}
+.bk-seal{top:16px; right:24px; width:92px; height:92px}
+.bk-school{display:flex; flex-direction:column; gap:1px; text-transform:uppercase; font-family:'Montserrat','Be Vietnam Pro',sans-serif; line-height:1.25; margin-top:0; max-width:none}
+.bk-school span{font-size:11px; font-weight:700; color:#42018A; letter-spacing:.02em}
+.bk-school b{font-size:12px; font-weight:800; color:#5772CB; letter-spacing:.02em}
+.bk-title{font-family:'Montserrat','Be Vietnam Pro',sans-serif; font-weight:900; text-transform:uppercase; color:#42018A; font-size:clamp(28px,6vw,44px); line-height:1.08; letter-spacing:-.01em; text-shadow:none; margin-top:4px !important}
+.bk-lead{font-family:'Be Vietnam Pro',sans-serif; font-style:normal; font-size:15px; color:#3A2D5C; max-width:40ch; margin-top:12px !important}
+.bk-name{font-family:'Montserrat','Be Vietnam Pro',sans-serif; font-weight:800; text-transform:uppercase; color:#42018A; font-size:clamp(22px,4.4vw,32px); border-bottom:4px solid #5772CB; padding-bottom:6px; text-shadow:none; margin-top:4px !important}
+.bk-degree{color:#3A2D5C; font-weight:500}
+.bk-tel{color:#5772CB !important; font-weight:700}
+.bk-facts{border-top:2px solid #5772CB}
+.bk-facts dt{color:#5772CB; font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:.05em}
+.bk-facts dd{color:#42018A; font-family:'Montserrat','Be Vietnam Pro',sans-serif; font-weight:800; font-size:16px}
+.bk-facts div+div{border-left:1px solid #CBD3F0}
+.bk-btn{border:2px solid #42018A; color:#42018A !important; background:#FFFFFF; border-radius:0; font-weight:700}
+.bk-btn:hover{background:#42018A; color:#FFFFFF !important; border-color:#42018A}
+.bk-btn--solid{background:#42018A; color:#FFFFFF !important}
+.bk-btn--solid:hover{background:#5772CB; border-color:#5772CB}
+.bk-divider::before,.bk-divider::after{background:#CBD3F0}
+.bk-divider span{width:34px; height:7px; background:#5772CB; transform:skewX(-38deg)}
+.bk-section h2{font-family:'Montserrat','Be Vietnam Pro',sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; color:#42018A; letter-spacing:.01em}
+.bk-section h2::after{width:46px; height:5px; background:#5772CB; transform:skewX(-38deg)}
+.bk-campus,.bk-park{background:#F1F3FC; border:1px solid #CBD3F0}
+.bk-live{background:#FFFFFF; border:1px solid #CBD3F0; border-bottom:0}
+.bk-live-text{color:#42018A}
+.bk-live-time{color:#5A5380}
+.bk-parkmap{border-color:#CBD3F0}
+.bk-parklist li{color:#1A0B3B}
+.bk-parklist b{color:#42018A}
+.bk-callout{background:#F1F3FC; border-left:4px solid #5772CB; color:#3A2D5C}
+.bk-center .bk-btn{border-color:#42018A; color:#42018A !important}
+.bk-center .bk-btn:hover{background:#42018A; color:#FFFFFF !important}
+/* admin */
+.bk-panel{border-left:6px solid #42018A}
+.bk-panel h3{font-family:'Montserrat','Be Vietnam Pro',sans-serif; font-weight:800; color:#42018A}
+.bk-panel-eyebrow{color:#5772CB}
+.bk-chip{border-color:#42018A; color:#42018A}
+.bk-chip:hover,.bk-chip.on{background:#42018A; color:#FFFFFF}
+.bk-chip--key{border:2px solid #5772CB; background:#EEF1FB; color:#42018A; box-shadow:0 2px 0 #5772CB}
+.bk-chip--key:hover,.bk-chip--key.on{background:#5772CB; border-color:#5772CB; color:#FFFFFF}
+@media (max-width:600px){
+  .bk-card{padding:92px 20px 54px}
+  .bk-seal{width:76px; height:76px; right:16px; top:14px}
+  .bk-card::before{background-size:100% 72px,100% 40px}
+}
 </style>
 </head>
 <body>
@@ -281,32 +339,32 @@ body{background:#E7ECF5 radial-gradient(circle at 20% 0%, #F3F6FB 0, transparent
     <span class="bk-corner tl"></span><span class="bk-corner tr"></span><span class="bk-corner bl"></span><span class="bk-corner br"></span>
     <!-- Con dấu trang trí -->
     <svg class="bk-seal" viewBox="0 0 120 120" aria-hidden="true">
-      <circle cx="60" cy="60" r="57" fill="#FFFFFF" stroke="#B5852A" stroke-width="2"/>
-      <circle cx="60" cy="60" r="50" fill="#EEF2F9"/>
-      <path d="M36,62 L36,82 Q60,94 84,82 L84,62 L60,72 Z" fill="#062659"/>
-      <polygon points="60,32 96,50 60,68 24,50" fill="#0A3A8C" stroke="#062659" stroke-width="1.5" stroke-linejoin="round"/>
-      <line x1="84" y1="54" x2="84" y2="80" stroke="#B5852A" stroke-width="2.5" stroke-linecap="round"/>
-      <rect x="81" y="78" width="6" height="12" rx="2" fill="#B5852A"/>
-      <circle cx="60" cy="50" r="3" fill="#B5852A"/>
+      <polygon points="60,5 107.6,32.5 107.6,87.5 60,115 12.4,87.5 12.4,32.5" fill="#FFFFFF" stroke="#42018A" stroke-width="5" stroke-linejoin="round"/>
+      <polygon points="60,18 96.5,39 96.5,81 60,102 23.5,81 23.5,39" fill="#EEF1FB"/>
+      <path d="M40,60 L40,79 Q60,90 80,79 L80,60 L60,70 Z" fill="#42018A"/>
+      <polygon points="60,32 94,49 60,66 26,49" fill="#5772CB" stroke="#42018A" stroke-width="2" stroke-linejoin="round"/>
+      <line x1="85" y1="52" x2="85" y2="76" stroke="#42018A" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="82" y="74" width="6" height="11" rx="2" fill="#42018A"/>
+      <circle cx="60" cy="49" r="3" fill="#FFFFFF"/>
     </svg>
 
-    <p class="bk-school">Trường Đại học Bách khoa – ĐHQG-HCM</p>
+    <p class="bk-school"><span>Đại học Quốc gia TP. Hồ Chí Minh</span><b>Trường Đại học Bách khoa</b></p>
     <h1 class="bk-title">Thư mời<br>Lễ Tốt nghiệp</h1>
 
-    <p class="bk-lead">Thân mời gia đình, bạn bè và đồng nghiệp đến chung vui trong ngày tốt nghiệp của</p>
-    <p class="bk-name">Nguyễn Huỳnh Long Nhi</p> <!-- ✏️ SỬA: tên của bạn -->
-    <p class="bk-degree">Tân Kỹ sư · <a class="bk-tel" href="tel:+84906635261">📞 090 663 5261</a></p> <!-- ✏️ SỬA nếu muốn thêm ngành -->
+    <p class="bk-lead">Thân mời gia đình, thầy cô và bạn bè đến chung vui trong ngày tốt nghiệp của</p>
+    <p class="bk-name">Nguyễn Hữu Hợp</p> <!-- ✏️ SỬA: tên của bạn -->
+    <p class="bk-degree">Tân Kỹ sư · <a class="bk-tel" href="tel:+84704897490">📞 0704 897 490</a></p> <!-- ✏️ SỬA nếu muốn thêm ngành -->
 
     <dl class="bk-facts">
       <div><dt>Ngày</dt><dd>Thứ Sáu, 27/11/2026</dd></div>      <!-- ✏️ SỬA -->
-      <div><dt>Giờ</dt><dd>10g00 – 18g30</dd></div>              <!-- ✏️ SỬA -->
-      <div><dt>Địa điểm</dt><dd>Đại học Bách Khoa</dd></div>
+      <div><dt>Giờ</dt><dd>09g45 – 12g00</dd></div>              <!-- ✏️ SỬA -->
+      <div><dt>Địa điểm</dt><dd>Trường ĐH Bách Khoa – Cơ sở 1</dd></div>
     </dl>
 
     <div class="bk-actions">
       <!-- ✏️ SỬA link lịch: dates=YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS theo giờ Việt Nam -->
       <a class="bk-btn bk-btn--solid" target="_blank" rel="noopener"
-         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85%20T%E1%BB%91t%20nghi%E1%BB%87p%20-%20Nguy%E1%BB%85n%20Hu%E1%BB%B3nh%20Long%20Nhi&dates=20261127T100000/20261127T170000&ctz=Asia/Ho_Chi_Minh&location=%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20B%C3%A1ch%20khoa%2C%20268%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20TP.HCM">
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85%20T%E1%BB%91t%20nghi%E1%BB%87p%20-%20Nguy%E1%BB%85n%20H%E1%BB%AFu%20H%E1%BB%A3p&dates=20261127T094500/20261127T120000&ctz=Asia/Ho_Chi_Minh&location=%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20B%C3%A1ch%20khoa%2C%20268%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20TP.HCM">
         Thêm vào Google Calendar
       </a>
       <a class="bk-btn" target="_blank" rel="noopener"
@@ -330,7 +388,7 @@ body{background:#E7ECF5 radial-gradient(circle at 20% 0%, #F3F6FB 0, transparent
         <div><p class="bk-live-text" id="liveText">Đang tải vị trí của mình…</p><p class="bk-live-time" id="liveTime"></p></div>
       </div>
       <div class="bk-mapimg" id="campusMap">
-        <img src="https://nhlongnhi.wordpress.com/wp-content/uploads/2026/11/img_1_1794718173838.jpg" data-capture-src="so-do-bach-khoa.png" id="mapImg" alt="Sơ đồ khuôn viên Trường Đại học Bách khoa, cơ sở Lý Thường Kiệt" width="803" height="382">
+        <img src="https://nhlongnhi.wordpress.com/wp-content/uploads/2026/11/img_1_1794718173838.jpg" id="mapImg" alt="Sơ đồ khuôn viên Trường Đại học Bách khoa, cơ sở Lý Thường Kiệt" width="803" height="382">
         <span class="bk-me hidden" id="me" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 51C12 38 2 31 2 19a18 18 0 1 1 36 0c0 12-10 19-18 32z" fill="#C2410C" stroke="#fff" stroke-width="3"/><circle cx="20" cy="15" r="5.5" fill="#fff"/><path d="M11 28c1.5-5 5-7.5 9-7.5s7.5 2.5 9 7.5" fill="#fff"/></svg><b>Mình</b></span>
         <span class="bk-me bk-me--ghost hidden" id="ghost" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 51C12 38 2 31 2 19a18 18 0 1 1 36 0c0 12-10 19-18 32z" fill="#0A3A8C" stroke="#fff" stroke-width="3"/><circle cx="20" cy="15" r="5.5" fill="#fff"/><path d="M11 28c1.5-5 5-7.5 9-7.5s7.5 2.5 9 7.5" fill="#fff"/></svg></span>
       </div>
@@ -343,7 +401,7 @@ body{background:#E7ECF5 radial-gradient(circle at 20% 0%, #F3F6FB 0, transparent
       <p class="bk-intro">Hôm đó trường sẽ rất đông, mọi người nên đến sớm vào buổi sáng để còn chỗ gửi xe. Có 3 bãi xe gần nhất, đi theo đường màu cam:</p>
       <figure class="bk-park">
         <div class="bk-parkmap">
-          <img src="https://nhlongnhi.wordpress.com/wp-content/uploads/2026/11/img_1_1794718173838.jpg" data-capture-src="so-do-bach-khoa.png" alt="Sơ đồ đường vào 3 bãi gửi xe máy trong Trường Đại học Bách khoa" width="803" height="382" loading="lazy">
+          <img src="https://nhlongnhi.wordpress.com/wp-content/uploads/2026/11/img_1_1794718173838.jpg" alt="Sơ đồ đường vào 3 bãi gửi xe máy trong Trường Đại học Bách khoa" width="803" height="382" loading="lazy">
 <svg viewBox="0 0 803 382" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="bk-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C2410C"/></marker></defs><g fill="#C2410C" fill-opacity=".4" stroke="#C2410C" stroke-width="2" stroke-linejoin="round"><polygon points="225.8,157.8 177.2,157.8 183.9,135.5 226.6,136.2"/><polygon points="567.4,159.9 565.9,146.3 681.3,144.1 687.3,158.5"/><polygon points="155.4,317.2 143.4,315.1 157.7,253.3 169.7,254.0"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#fff" stroke-width="7" opacity=".9"><path d="M141.9,198.7 L167.4,133.3 L187.6,134.8"/><path d="M114.2,192.2 L141.2,198.7 L114.2,260.5 L153.9,261.2"/><path d="M770.4,249.7 L722.5,146.3 L695.5,149.9"/></g><g class="bk-route" stroke="#C2410C" stroke-width="3.5" stroke-dasharray="8 6" marker-end="url(#bk-arrow)"><path d="M141.9,198.7 L167.4,133.3 L187.6,134.8"/><path d="M114.2,192.2 L141.2,198.7 L114.2,260.5 L153.9,261.2"/><path d="M770.4,249.7 L722.5,146.3 L695.5,149.9"/></g></g><g font-family="Be Vietnam Pro, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle"><g><circle cx="206" cy="121" r="11.5" fill="#C2410C" stroke="#fff" stroke-width="2"/><text x="206" y="125" fill="#fff">P1</text></g><g><circle cx="112.7" cy="235.3" r="11.5" fill="#C2410C" stroke="#fff" stroke-width="2"/><text x="112.7" y="239.3" fill="#fff">P2</text></g><g><circle cx="721" cy="176.4" r="11.5" fill="#C2410C" stroke="#fff" stroke-width="2"/><text x="721" y="180.4" fill="#fff">P3</text></g></g></svg>
         </div>
       </figure>
@@ -686,8 +744,6 @@ function shotSay(text, cls){ const m = $('shotMsg'); m.textContent = text; m.cla
 async function captureCard(){
   if (typeof html2canvas !== 'function') throw new Error('no-lib');
   const card = document.querySelector('article.bk-card');
-  const imgs = [...document.querySelectorAll('img[data-capture-src]')];
-  const original = imgs.map(i => i.getAttribute('src'));
   /* Chỉ chụp phần thư mời: bỏ nút bấm và phần bản đồ trực tiếp */
   const liveSec = document.getElementById('ban-do');
   const hideList = [];
@@ -696,28 +752,18 @@ async function captureCard(){
   if (liveSec) {
     const prev = liveSec.previousElementSibling;
     if (prev && prev.classList.contains('bk-divider')) hideList.push(prev);
-    hideList.push(liveSec);
-    for (let n = liveSec.nextElementSibling; n; n = n.nextElementSibling) hideList.push(n);
+    for (let n = liveSec; n; n = n.nextElementSibling) hideList.push(n);
   }
   hideList.forEach(e => e.style.display = 'none');
   try {
-    imgs.forEach(i => i.setAttribute('src', i.dataset.captureSrc));
-    await Promise.all(imgs.map(i => new Promise(r => {
-      if (i.complete && i.naturalWidth) return r();
-      i.addEventListener('load', r, { once: true }); i.addEventListener('error', r, { once: true });
-    })));
-    return await captureWith(card);
+    const canvas = await html2canvas(card, {
+      scale: 2, useCORS: true, backgroundColor: '#FFFFFF', logging: false,
+      ignoreElements: el => el.classList && (el.classList.contains('bk-actions') || el.classList.contains('bk-center'))
+    });
+    return await new Promise((res, rej) => canvas.toBlob(bl => bl ? res(bl) : rej(new Error('blob')), 'image/png'));
   } finally {
-    imgs.forEach((i, k) => i.setAttribute('src', original[k]));
     hideList.forEach(e => e.style.display = '');
   }
-}
-async function captureWith(card){
-  const canvas = await html2canvas(card, {
-    scale: 2, useCORS: true, backgroundColor: '#FFFFFF', logging: false,
-    ignoreElements: el => el.classList && (el.classList.contains('bk-actions') || el.classList.contains('bk-center'))
-  });
-  return await new Promise((res, rej) => canvas.toBlob(b => b ? res(b) : rej(new Error('blob')), 'image/png'));
 }
 $('shotBtn').addEventListener('click', async () => {
   $('shotBtn').disabled = true; shotSay('Đang chụp ảnh, chờ một chút…', '');
