@@ -1,1 +1,749 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thư mời Lễ Tốt nghiệp · Đại học Bách Khoa</title>
+<meta name="description" content="Thư mời dự Lễ Tốt nghiệp, Thứ Sáu 27/11/2026 tại Đại học Bách Khoa TP.HCM">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Lora:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0; background:#F6F8FC}
+
+
+.bk-invite{
+  --blue:#0A3A8C; --blue-deep:#062659; --ink:#14213D; --gold:#B5852A;
+  --mist:#EEF2F9; --line:#C9D3E6; --paper:#FFFFFF;
+  font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  color:var(--ink); line-height:1.6; font-size:17px;
+  max-width:760px; margin:0 auto; padding:24px 16px 48px; box-sizing:border-box;
+}
+.bk-invite *,.bk-invite *::before,.bk-invite *::after{box-sizing:border-box}
+.bk-invite h1,.bk-invite h2,.bk-invite p{margin:0}
+.bk-invite a{color:inherit}
+
+/* Thiệp chính */
+.bk-card{
+  position:relative; background:var(--paper); border:1px solid var(--line);
+  border-top:10px solid var(--blue); padding:44px 40px 36px; overflow:hidden;
+}
+.bk-card::after{ /* viền kép kiểu văn bằng */
+  content:""; position:absolute; inset:10px; border:1px solid var(--line); pointer-events:none;
+}
+.bk-school{font-size:14px; color:var(--blue); font-weight:500; max-width:70%}
+.bk-title{
+  font-family:'Lora',Georgia,serif; font-weight:700; color:var(--blue-deep);
+  font-size:clamp(34px,7vw,52px); line-height:1.1; margin-top:28px !important;
+}
+.bk-lead{font-family:'Lora',Georgia,serif; font-style:italic; font-size:19px; margin-top:22px !important; max-width:34ch}
+.bk-name{
+  font-family:'Lora',Georgia,serif; font-size:clamp(28px,5.5vw,40px); font-weight:500;
+  margin-top:6px !important; padding-bottom:10px; border-bottom:2px solid var(--gold); display:inline-block;
+}
+.bk-degree{font-size:15px; margin-top:10px !important; color:#3A4766}
+
+.bk-seal{position:absolute; top:28px; right:28px; width:112px; height:112px}
+@media (prefers-reduced-motion:no-preference){
+  .bk-seal{animation:bk-stamp .7s cubic-bezier(.2,1.4,.4,1) .3s both}
+  @keyframes bk-stamp{from{opacity:0; transform:scale(1.6) rotate(-14deg)} to{opacity:1; transform:scale(1) rotate(0)}}
+}
+
+.bk-facts{display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:32px; border-top:1px solid var(--line)}
+.bk-facts div{padding:16px 16px 4px 0}
+.bk-facts div+div{padding-left:16px; border-left:1px solid var(--line)}
+.bk-facts dt{font-size:13px; color:#5A6684}
+.bk-facts dd{margin:2px 0 0; font-weight:700; font-size:18px; color:var(--blue-deep)}
+
+.bk-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+.bk-btn{
+  display:inline-block; padding:12px 20px; font-weight:500; font-size:15px; text-decoration:none !important;
+  border:2px solid var(--blue); color:var(--blue) !important; background:transparent;
+}
+.bk-btn--solid{background:var(--blue); color:#fff !important}
+.bk-btn:hover{background:var(--blue-deep); border-color:var(--blue-deep); color:#fff !important}
+.bk-btn:focus-visible{outline:3px solid var(--gold); outline-offset:3px}
+
+/* Các phần dưới */
+.bk-section{margin-top:48px}
+.bk-section h2{font-family:'Lora',Georgia,serif; font-size:26px; color:var(--blue-deep); margin-bottom:16px !important}
+
+.bk-timeline{list-style:none; margin:0; padding:0; border-left:2px solid var(--line)}
+.bk-timeline li{position:relative; padding:0 0 22px 24px}
+.bk-timeline li::before{
+  content:""; position:absolute; left:-7px; top:7px; width:12px; height:12px;
+  background:var(--paper); border:2px solid var(--blue); border-radius:50%;
+}
+.bk-timeline li.is-mine::before{background:var(--gold); border-color:var(--gold)}
+.bk-timeline b{display:block; color:var(--blue-deep)}
+.bk-timeline span{font-size:15px; color:#3A4766}
+
+.bk-tablewrap{overflow-x:auto; border:1px solid var(--line)}
+.bk-table{width:100%; border-collapse:collapse; font-size:15px; min-width:520px}
+.bk-table th,.bk-table td{padding:10px 14px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+.bk-table th{background:var(--mist); font-weight:500}
+.bk-table tr:last-child td{border-bottom:0}
+.bk-table tr.is-mine td{background:#FBF4E4; font-weight:700}
+.bk-table td:nth-child(2){white-space:nowrap}
+
+.bk-notes{margin:0; padding-left:20px}
+.bk-notes li{margin-bottom:8px}
+
+.bk-campus{margin:16px 0 0}
+.bk-campus img{width:100%; height:auto; display:block; border:1px solid var(--line)}
+.bk-campus figcaption{font-size:14px; color:#5A6684; margin-top:6px}
+.bk-mapimg{position:relative; border:1px solid var(--line); line-height:0}
+.bk-mapimg img{width:100%; height:auto; display:block; border:0 !important; margin:0 !important}
+.bk-ring{position:absolute; width:7%; aspect-ratio:1; transform:translate(-50%,-50%); border-radius:50%; border:3px solid; box-shadow:0 0 0 3px rgba(255,255,255,.85)}
+.bk-ring--blue{border-color:#0A3A8C}
+.bk-ring--gold{border-color:#B5852A; width:9%}
+.bk-ring--dark{border-color:#14213D; width:6%}
+.bk-tag{position:absolute; line-height:1.2; font-size:clamp(9px,1.6vw,12.5px); font-weight:700; color:#fff; padding:4px 8px; border-radius:4px; white-space:nowrap; box-shadow:0 2px 6px rgba(0,0,0,.18)}
+.bk-tag--blue{background:#0A3A8C}
+.bk-tag--gold{background:#B5852A}
+.bk-tag--dark{background:#14213D}
+.bk-pin{position:absolute; width:clamp(20px,4.2vw,34px); transform:translate(-50%,-100%); filter:drop-shadow(0 2px 3px rgba(0,0,0,.3)); line-height:0}
+.bk-pin svg{width:100%; height:auto; display:block}
+.bk-pin--blue{color:#0A3A8C} .bk-pin--gold{color:#B5852A} .bk-pin--green{color:#2E7D4F}
+@media (prefers-reduced-motion:no-preference){
+  .bk-pin{animation:bk-drop .5s cubic-bezier(.3,1.5,.5,1) both}
+  .bk-pin--green{animation-delay:.1s} .bk-pin--gold{animation-delay:.2s}
+  @keyframes bk-drop{from{opacity:0; transform:translate(-50%,-160%)} to{opacity:1; transform:translate(-50%,-100%)}}
+}
+.bk-sign{margin-top:48px; text-align:right; font-family:'Lora',Georgia,serif; font-style:italic; font-size:19px}
+
+@media (max-width:600px){
+  .bk-card{padding:36px 22px 28px}
+  .bk-seal{width:76px; height:76px; top:20px; right:18px}
+  .bk-facts{grid-template-columns:1fr}
+  .bk-facts div+div{padding-left:0; border-left:0; border-top:1px solid var(--line)}
+}
+
+/* ---- Vị trí trực tiếp ---- */
+.hidden{display:none !important}
+.bk-live{display:flex; gap:12px; align-items:flex-start; background:var(--paper); border:1px solid var(--line); border-bottom:0; padding:12px 16px}
+.bk-live-dot{flex:none; width:12px; height:12px; border-radius:50%; margin-top:6px; background:var(--line)}
+.bk-live-dot.live{background:#2E7D4F; animation:bk-pulse 2s infinite}
+.bk-live-dot.stale{background:var(--gold)}
+@keyframes bk-pulse{0%{box-shadow:0 0 0 0 rgba(46,125,79,.5)}70%{box-shadow:0 0 0 10px rgba(46,125,79,0)}100%{box-shadow:0 0 0 0 rgba(46,125,79,0)}}
+.bk-live-text{font-weight:700; font-size:16px}
+.bk-live-time{font-size:14px; color:#5A6684}
+.bk-me{position:absolute; transform:translate(-50%,-100%); pointer-events:none; line-height:0; text-align:center; transition:left .6s ease, top .6s ease; z-index:2}
+.bk-me svg{width:clamp(28px,5.5vw,44px); height:auto; filter:drop-shadow(0 2px 4px rgba(0,0,0,.4))}
+.bk-me b{position:absolute; left:50%; top:-6px; transform:translate(-50%,-100%); background:#C2410C; color:#fff; font-size:11px; line-height:1; padding:3px 6px; border-radius:3px; white-space:nowrap}
+.bk-me--ghost{opacity:.75}
+.bk-me--ghost.bk-drag{pointer-events:auto; cursor:grab; touch-action:none; z-index:3}
+.bk-me--ghost.bk-drag svg{width:clamp(36px,7vw,48px)}
+.bk-me--ghost.grabbing{cursor:grabbing; transition:none; opacity:.95}
+.bk-me--ghost.grabbing svg{transform:scale(1.12); transform-origin:50% 100%}
+.bk-chip--drag{border-style:dashed}
+.bk-panel{margin-top:22px; background:var(--paper); border:1px solid var(--line); border-left:6px solid #C2410C; padding:18px}
+.bk-panel h3{font-family:'Lora',Georgia,serif; font-size:21px; color:var(--blue-deep); margin:0 0 4px}
+.bk-panel-hint{font-size:14px; color:#5A6684; margin:0 0 12px !important}
+.bk-panel label{display:block; font-size:14px; font-weight:500; margin:12px 0 4px}
+.bk-panel input[type=text],.bk-panel input[type=password]{width:100%; font:inherit; font-size:16px; padding:10px 12px; border:1.5px solid var(--line); border-radius:6px; background:#fff; color:var(--ink)}
+.bk-panel input:focus{outline:3px solid rgba(10,58,140,.25); border-color:var(--blue)}
+.bk-chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:6px}
+.bk-group{font-size:13px; font-weight:700; color:#5A6684; text-transform:uppercase; letter-spacing:.04em; margin:16px 0 0 !important}
+.bk-chip--state{border-color:#C2410C; color:#C2410C}
+.bk-chip--state:hover,.bk-chip--state.on{background:#C2410C; color:#fff}
+.bk-live-dot.away{background:#C2410C}
+.bk-live-dot.gone{background:#8A93A8}
+.bk-chip{border:1.5px solid var(--blue); background:transparent; color:var(--blue); font:inherit; font-size:14px; font-weight:500; padding:8px 12px; border-radius:999px; cursor:pointer}
+.bk-chip:hover,.bk-chip.on{background:var(--blue); color:#fff}
+.bk-panel .bk-toggle{display:flex; align-items:center; gap:8px; font-size:15px; font-weight:400}
+.bk-toggle input{width:20px; height:20px}
+.bk-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+.bk-row .bk-btn{cursor:pointer; font-family:inherit}
+.bk-row .bk-btn:disabled{opacity:.5; cursor:default}
+.bk-msg{font-size:14px; margin-top:10px !important; min-height:1.4em}
+.bk-msg.err{color:#A12E2E} .bk-msg.ok{color:#2E7D4F}
+
+/* ======== Toàn trang là một tấm thiệp ======== */
+body{background:#E7ECF5 radial-gradient(circle at 20% 0%, #F3F6FB 0, transparent 55%) fixed}
+.bk-invite{padding:32px 14px 56px}
+.bk-card{padding:56px 48px 48px; box-shadow:0 1px 0 #fff inset, 0 24px 60px -20px rgba(6,38,89,.28), 0 2px 6px rgba(6,38,89,.06)}
+.bk-corner{position:absolute; width:22px; height:22px; border:2px solid var(--gold); pointer-events:none; z-index:1}
+.bk-corner.tl{top:18px; left:18px; border-right:0; border-bottom:0}
+.bk-corner.tr{top:18px; right:18px; border-left:0; border-bottom:0}
+.bk-corner.bl{bottom:18px; left:18px; border-right:0; border-top:0}
+.bk-corner.br{bottom:18px; right:18px; border-left:0; border-top:0}
+.bk-divider{display:flex; align-items:center; gap:14px; margin:44px 0 36px}
+.bk-divider::before,.bk-divider::after{content:""; flex:1; height:1px; background:var(--line)}
+.bk-divider span{width:9px; height:9px; background:var(--gold); transform:rotate(45deg)}
+.bk-section{margin-top:0}
+.bk-section h2{text-align:center; font-size:24px; margin-bottom:20px !important}
+.bk-section h2::after{content:""; display:block; width:36px; height:2px; background:var(--gold); margin:10px auto 0}
+.bk-notes{max-width:58ch; margin:0 auto !important}
+#ban-do > p{text-align:center; max-width:60ch; margin-left:auto !important; margin-right:auto !important}
+.bk-campus{margin:22px 0 0; background:var(--mist); border:1px solid var(--line); padding:10px}
+.bk-live{border:1px solid var(--line); border-bottom:0}
+.bk-campus figcaption{text-align:center; font-family:'Lora',Georgia,serif; font-style:italic; font-size:15px; color:#3A4766; margin:10px 6px 2px}
+.bk-sign{text-align:center; font-style:normal; margin-top:0}
+.bk-sign-line{font-family:'Lora',Georgia,serif; font-style:italic; font-size:20px; color:#3A4766}
+.bk-sign-name{font-family:'Lora',Georgia,serif; font-weight:500; font-size:clamp(26px,5vw,34px); color:var(--blue-deep); margin-top:6px !important; display:inline-block; padding:0 6px 6px; border-bottom:2px solid var(--gold)}
+.bk-panel{margin-top:28px}
+.bk-panel-eyebrow{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#C2410C; margin:0 0 6px !important}
+@media (max-width:600px){
+  .bk-card{padding:44px 22px 36px}
+  .bk-corner{width:16px; height:16px}
+  .bk-corner.tl,.bk-corner.tr{top:12px} .bk-corner.bl,.bk-corner.br{bottom:12px}
+  .bk-corner.tl,.bk-corner.bl{left:12px} .bk-corner.tr,.bk-corner.br{right:12px}
+  .bk-divider{margin:36px 0 28px}
+  .bk-campus{padding:6px; margin-left:-8px; margin-right:-8px}
+}
+.bk-link{color:var(--blue) !important; font-weight:500; text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:3px; text-decoration-thickness:2px}
+.bk-link:hover{color:var(--blue-deep) !important; text-decoration-color:var(--blue-deep)}
+.bk-intro{text-align:center; max-width:60ch; margin:0 auto !important}
+.bk-park{margin:20px 0 0; background:var(--mist); border:1px solid var(--line); padding:10px}
+.bk-parkmap{position:relative; line-height:0; border:1px solid var(--line)}
+.bk-parkmap img{width:100%; height:auto; display:block; border:0 !important; margin:0 !important}
+.bk-parkmap svg{position:absolute; inset:0; width:100%; height:100%}
+@media (prefers-reduced-motion:no-preference){ .bk-route path{animation:bk-dash 1.2s linear infinite} @keyframes bk-dash{to{stroke-dashoffset:-14}} }
+.bk-parklist{list-style:none; margin:20px auto 0 !important; padding:0; max-width:60ch; display:grid; gap:14px}
+.bk-parklist li{display:flex; gap:12px; align-items:flex-start}
+.bk-parklist b{color:var(--blue-deep)}
+.bk-parklist div > b:first-child{display:block}
+.bk-p{flex:none; width:34px; height:34px; border-radius:50%; background:#C2410C; color:#fff; font-weight:700; font-size:14px; display:grid; place-items:center}
+.bk-center{text-align:center; margin-top:22px !important}
+@media (max-width:600px){ .bk-park{padding:6px; margin-left:-8px; margin-right:-8px} }
+.bk-parkmap svg{pointer-events:none}
+.bk-parkmap svg.editing{pointer-events:auto; touch-action:none; outline:2px dashed #C2410C; outline-offset:-2px}
+.bk-geom{margin-top:22px; padding-top:6px; border-top:1px solid var(--line)}
+.bk-geom label{display:block; font-size:14px; font-weight:500; margin:14px 0 2px}
+.bk-geom textarea{width:100%; font:12.5px/1.45 ui-monospace,Menlo,Consolas,monospace; padding:8px 10px; border:1.5px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); resize:vertical; margin-top:4px}
+.bk-geom .bk-row{margin-top:10px}
+.bk-geom-status{font-size:13px; color:#5A6684; margin:10px 0 0}
+.bk-callout{max-width:60ch; margin:22px auto 0 !important; background:var(--mist); border-left:4px solid var(--gold); padding:12px 16px; font-size:15px; text-align:left}
+.bk-chip--key{border:2px solid #B5852A; background:#FBF4E4; color:#062659; font-weight:700; font-size:15px; padding:11px 18px; box-shadow:0 2px 0 #B5852A}
+.bk-chip--key:hover,.bk-chip--key.on{background:#B5852A; border-color:#B5852A; color:#fff}
+.bk-shot{margin-top:22px; padding-top:6px; border-top:1px solid var(--line)}
+.bk-shotbox{margin-top:12px}
+.bk-shotbox img{width:100%; height:auto; display:block; border:1px solid var(--line); background:#fff}
+.bk-shotbox .bk-row{margin-top:12px}
+.bk-tel{color:var(--blue); font-weight:500; text-decoration:none; white-space:nowrap}
+
+/* ---- layout tightened vertically ---- */
+.bk-invite{padding:20px 12px 36px}
+.bk-card{padding:38px 44px 26px}
+.bk-title{margin-top:18px !important}
+.bk-lead{margin-top:14px !important; font-size:18px}
+.bk-name{margin-top:4px !important; padding-bottom:8px}
+.bk-degree{margin-top:6px !important}
+.bk-facts{margin-top:18px}
+.bk-facts div{padding:10px 14px 2px 0}
+.bk-facts div+div{padding-left:14px}
+.bk-actions{margin-top:16px; gap:10px}
+.bk-divider{margin:24px 0 20px}
+.bk-section h2{font-size:22px; margin-bottom:12px !important}
+.bk-section h2::after{margin-top:8px}
+.bk-campus{margin-top:12px; padding:8px}
+.bk-live-text{font-size:15px}
+.bk-live{padding:10px 14px}
+.bk-campus figcaption{margin-top:6px}
+@media (max-width:600px){
+  .bk-card{padding:30px 20px 20px}
+  .bk-divider{margin:18px 0 16px}
+  .bk-facts div{padding:8px 10px 2px 0}
+  .bk-facts div+div{padding-left:10px}
+}
+
+/* ---- compact vertical rhythm (both modes) ---- */
+.bk-intro{margin-top:0 !important; font-size:15px; line-height:1.5}
+.bk-park{margin-top:12px; padding:6px}
+.bk-parklist{margin-top:12px !important; gap:8px}
+.bk-parklist li{gap:10px; font-size:15px; line-height:1.45}
+.bk-p{width:28px; height:28px; font-size:12px}
+.bk-callout{margin-top:12px !important; padding:9px 14px; font-size:14px; line-height:1.45}
+.bk-center{margin-top:12px !important}
+.bk-center .bk-btn{padding:10px 18px; font-size:14px}
+.bk-live{padding:9px 14px}
+.bk-live-text{font-size:15px}
+.bk-section{margin-top:0}
+.bk-section h2{margin-bottom:10px !important}
+.bk-facts div{padding:8px 14px 2px 0}
+.bk-actions{margin-top:14px}
+.bk-card{padding:32px 44px 22px}
+.bk-divider{margin:20px 0 16px}
+@media (max-width:600px){
+  .bk-card{padding:26px 18px 18px}
+  .bk-divider{margin:14px 0 12px}
+  .bk-parklist{gap:6px}
+}
+</style>
+</head>
+<body>
+<div class="bk-invite" lang="vi">
+
+  <article class="bk-card">
+    <span class="bk-corner tl"></span><span class="bk-corner tr"></span><span class="bk-corner bl"></span><span class="bk-corner br"></span>
+    <!-- Con dấu trang trí -->
+    <svg class="bk-seal" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="57" fill="#FFFFFF" stroke="#B5852A" stroke-width="2"/>
+      <circle cx="60" cy="60" r="50" fill="#EEF2F9"/>
+      <path d="M36,62 L36,82 Q60,94 84,82 L84,62 L60,72 Z" fill="#062659"/>
+      <polygon points="60,32 96,50 60,68 24,50" fill="#0A3A8C" stroke="#062659" stroke-width="1.5" stroke-linejoin="round"/>
+      <line x1="84" y1="54" x2="84" y2="80" stroke="#B5852A" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="81" y="78" width="6" height="12" rx="2" fill="#B5852A"/>
+      <circle cx="60" cy="50" r="3" fill="#B5852A"/>
+    </svg>
+
+    <p class="bk-school">Trường Đại học Bách khoa – ĐHQG-HCM</p>
+    <h1 class="bk-title">Thư mời<br>Lễ Tốt nghiệp</h1>
+
+    <p class="bk-lead">Thân mời gia đình, bạn bè và đồng nghiệp đến chung vui trong ngày tốt nghiệp của</p>
+    <p class="bk-name">Nguyễn Huỳnh Long Nhi</p> <!-- ✏️ SỬA: tên của bạn -->
+    <p class="bk-degree">Tân Kỹ sư · <a class="bk-tel" href="tel:+84906635261">📞 090 663 5261</a></p> <!-- ✏️ SỬA nếu muốn thêm ngành -->
+
+    <dl class="bk-facts">
+      <div><dt>Ngày</dt><dd>Thứ Sáu, 27/11/2026</dd></div>      <!-- ✏️ SỬA -->
+      <div><dt>Giờ</dt><dd>10g00 – 18g30</dd></div>              <!-- ✏️ SỬA -->
+      <div><dt>Địa điểm</dt><dd>Đại học Bách Khoa</dd></div>
+    </dl>
+
+    <div class="bk-actions">
+      <!-- ✏️ SỬA link lịch: dates=YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS theo giờ Việt Nam -->
+      <a class="bk-btn bk-btn--solid" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=L%E1%BB%85%20T%E1%BB%91t%20nghi%E1%BB%87p%20-%20Nguy%E1%BB%85n%20Hu%E1%BB%B3nh%20Long%20Nhi&dates=20261127T100000/20261127T170000&ctz=Asia/Ho_Chi_Minh&location=%C4%90%E1%BA%A1i%20h%E1%BB%8Dc%20B%C3%A1ch%20khoa%2C%20268%20L%C3%BD%20Th%C6%B0%E1%BB%9Dng%20Ki%E1%BB%87t%2C%20TP.HCM">
+        Thêm vào Google Calendar
+      </a>
+      <a class="bk-btn" target="_blank" rel="noopener"
+         href="https://maps.app.goo.gl/LzPiGxn88iWWNLuk9">
+        Đường đến Bách Khoa
+      </a>
+      <a class="bk-btn" href="#vi-tri">
+        📍 Xem mình đang ở đâu
+      </a>
+    </div>
+
+    <div class="bk-divider" aria-hidden="true"><span></span></div>
+
+    
+    <section class="bk-section" id="ban-do">
+    <h2>Vị trí trực tiếp của mình</h2>
+    <!-- SƠ ĐỒ KHUÔN VIÊN + VỊ TRÍ TRỰC TIẾP. Ảnh lấy từ Media của WordPress. -->
+    <figure class="bk-campus" id="vi-tri" style="scroll-margin-top:12px">
+      <div class="bk-live" aria-live="polite">
+        <span class="bk-live-dot" id="liveDot"></span>
+        <div><p class="bk-live-text" id="liveText">Đang tải vị trí của mình…</p><p class="bk-live-time" id="liveTime"></p></div>
+      </div>
+      <div class="bk-mapimg" id="campusMap">
+        <img src="https://nhlongnhi.wordpress.com/wp-content/uploads/2026/11/img_1_1794718173838.jpg" data-capture-src="so-do-bach-khoa.png" id="mapImg" alt="Sơ đồ khuôn viên Trường Đại học Bách khoa, cơ sở Lý Thường Kiệt" width="803" height="382">
+        <span class="bk-me hidden" id="me" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 51C12 38 2 31 2 19a18 18 0 1 1 36 0c0 12-10 19-18 32z" fill="#C2410C" stroke="#fff" stroke-width="3"/><circle cx="20" cy="15" r="5.5" fill="#fff"/><path d="M11 28c1.5-5 5-7.5 9-7.5s7.5 2.5 9 7.5" fill="#fff"/></svg><b>Mình</b></span>
+        <span class="bk-me bk-me--ghost hidden" id="ghost" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 51C12 38 2 31 2 19a18 18 0 1 1 36 0c0 12-10 19-18 32z" fill="#0A3A8C" stroke="#fff" stroke-width="3"/><circle cx="20" cy="15" r="5.5" fill="#fff"/><path d="M11 28c1.5-5 5-7.5 9-7.5s7.5 2.5 9 7.5" fill="#fff"/></svg></span>
+      </div>
+    </figure>
+
+    </section>
+      <div class="bk-divider" aria-hidden="true" id="gui-div"><span></span></div>
+    <section class="bk-section" id="gui-xe">
+      <h2>Gửi xe máy trong trường</h2>
+      <p class="bk-intro">Hôm đó trường sẽ rất đông, mọi người nên đến sớm vào buổi sáng để còn chỗ gửi xe. Có 3 bãi xe gần nhất, đi theo đường màu cam:</p>
+      <figure class="bk-park">
+        <div class="bk-parkmap">
+          <img src="https://nhlongnhi.wordpress.com/wp-content/uploads/2026/11/img_1_1794718173838.jpg" data-capture-src="so-do-bach-khoa.png" alt="Sơ đồ đường vào 3 bãi gửi xe máy trong Trường Đại học Bách khoa" width="803" height="382" loading="lazy">
+<svg viewBox="0 0 803 382" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="bk-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C2410C"/></marker></defs><g fill="#C2410C" fill-opacity=".4" stroke="#C2410C" stroke-width="2" stroke-linejoin="round"><polygon points="225.8,157.8 177.2,157.8 183.9,135.5 226.6,136.2"/><polygon points="567.4,159.9 565.9,146.3 681.3,144.1 687.3,158.5"/><polygon points="155.4,317.2 143.4,315.1 157.7,253.3 169.7,254.0"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g stroke="#fff" stroke-width="7" opacity=".9"><path d="M141.9,198.7 L167.4,133.3 L187.6,134.8"/><path d="M114.2,192.2 L141.2,198.7 L114.2,260.5 L153.9,261.2"/><path d="M770.4,249.7 L722.5,146.3 L695.5,149.9"/></g><g class="bk-route" stroke="#C2410C" stroke-width="3.5" stroke-dasharray="8 6" marker-end="url(#bk-arrow)"><path d="M141.9,198.7 L167.4,133.3 L187.6,134.8"/><path d="M114.2,192.2 L141.2,198.7 L114.2,260.5 L153.9,261.2"/><path d="M770.4,249.7 L722.5,146.3 L695.5,149.9"/></g></g><g font-family="Be Vietnam Pro, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle"><g><circle cx="206" cy="121" r="11.5" fill="#C2410C" stroke="#fff" stroke-width="2"/><text x="206" y="125" fill="#fff">P1</text></g><g><circle cx="112.7" cy="235.3" r="11.5" fill="#C2410C" stroke="#fff" stroke-width="2"/><text x="112.7" y="239.3" fill="#fff">P2</text></g><g><circle cx="721" cy="176.4" r="11.5" fill="#C2410C" stroke="#fff" stroke-width="2"/><text x="721" y="180.4" fill="#fff">P3</text></g></g></svg>
+        </div>
+      </figure>
+      <ol class="bk-parklist">
+        <li><span class="bk-p">P1</span><div><b>Bãi xe B3</b>Vào <b>Cổng 1</b> (đường Lý Thường Kiệt), rẽ trái, chạy thẳng đến khoảng sân gửi xe.</div></li>
+        <li><span class="bk-p">P2</span><div><b>Bãi xe B1</b>Vào <b>Cổng 1</b>, rẽ phải, gửi xe ở lối đi giữa hai tòa nhà.</div></li>
+        <li><span class="bk-p">P3</span><div><b>Bãi xe cổng 3</b>Vào <b>Cổng 3</b> (đường Tô Hiến Thành), chạy thẳng lên rồi rẽ trái vào khu gửi xe.</div></li>
+      </ol>
+      <p class="bk-callout"><b>Lưu ý:</b> Nếu bãi xe trong trường đã kín, mọi người có thể gửi xe ở khu vực bên ngoài gần trường, ví dụ <b>Bệnh viện Trung Vương</b> hoặc <b>Sân vận động Phú Thọ</b>.</p>
+      <p class="bk-center"><a class="bk-btn" href="https://www.facebook.com/reel/2078243583062569" target="_blank" rel="noopener">▶ Xem video hướng dẫn gửi xe</a></p>
+    </section>
+  </article>
+
+    <!-- Bảng cập nhật vị trí: chỉ hiện khi mở trang với ?admin ở cuối link -->
+  <section class="bk-panel hidden" id="panel">
+      <p class="bk-panel-eyebrow">Chỉ bạn thấy phần này · chế độ ?admin</p>
+      <h3>Cập nhật vị trí của mình</h3>
+      <div class="bk-keybox">
+        <label for="adminKey" id="keyLabel">Mật khẩu quản lý</label>
+        <p class="bk-geom-status" id="keyStatus"></p>
+        <div class="bk-row">
+          <input type="password" id="adminKey" autocomplete="current-password" placeholder="Nhập mật khẩu quản lý" style="flex:1; min-width:0">
+          <button class="bk-btn" id="keySave" type="button">Lưu</button>
+        </div>
+      </div>
+      <p class="bk-panel-hint">Chạm vào sơ đồ, kéo thả marker xanh, hoặc chọn nhanh một điểm. Thêm ghi chú nếu muốn, rồi bấm “Cập nhật”.</p>
+      <p class="bk-group">Điểm chính</p>
+      <div class="bk-chips" id="chipsKey"></div>
+      <p class="bk-group">Tòa nhà &amp; khu vực</p>
+      <div class="bk-chips" id="chipsPlaces"></div>
+      <p class="bk-group">Cổng trường</p>
+      <div class="bk-chips" id="chipsGates"></div>
+      <p class="bk-group">Không ở trên bản đồ</p>
+      <div class="bk-chips" id="chipsStates"></div>
+      <label for="statusInput">Ghi chú (không bắt buộc)</label>
+      <input type="text" id="statusInput" maxlength="120" placeholder="Ví dụ: Đang chụp ảnh với lớp ở sân bóng">
+      <label class="bk-toggle"><input type="checkbox" id="hideBox"> Tạm ẩn vị trí với khách</label>
+      <div class="bk-row">
+        <button class="bk-btn bk-btn--solid" id="sendBtn" type="button" disabled>Cập nhật</button>
+      </div>
+      <p class="bk-msg" id="msg"></p>
+      <div class="bk-shot">
+        <p class="bk-group">Chụp ảnh để gửi</p>
+        <div class="bk-row"><button class="bk-btn bk-btn--solid" id="shotBtn" type="button">📸 Chụp ảnh thiệp</button></div>
+        <p class="bk-msg" id="shotMsg"></p>
+        <div class="bk-shotbox hidden" id="shotBox">
+          <img id="shotImg" alt="Ảnh thiệp mời">
+          <div class="bk-row">
+            <a class="bk-btn" id="shotDl" href="#" download="thiep-tot-nghiep.png">⬇ Tải ảnh</a>
+            <button class="bk-btn hidden" id="shotShare" type="button">📤 Gửi ảnh</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+/* ===================== ✏️ SỬA PHẦN NÀY ===================== */
+const CONFIG = {
+  API_URL:   'https://script.google.com/macros/library/d/1iF0aBFFDVvzqJITWZDoBriX8_qic_2yxERS0tbLN_DIt9vYFb8cIWf4A/1',   // link .../exec từ bước Deploy Apps Script
+  NAME:      'Nguyễn Huỳnh Long Nhi',
+  REFRESH_SECONDS: 20,
+  STALE_MINUTES: 45
+};
+/* Điểm chọn nhanh: vị trí tính theo % chiều ngang / dọc của ảnh bản đồ */
+const PLACES = [
+  { name: 'Hội trường A5', x: 46.0, y: 38,   status: 'Mình đang ở Hội trường A5' },
+  { name: 'Sân bóng',      x: 35.1, y: 51,   status: 'Mình đang chụp ảnh ở sân bóng' },
+  { name: 'B1',            x: 22.2, y: 64,   status: 'Mình đang ở tòa B1' },
+  { name: 'B1A',           x: 17.4, y: 68,   status: 'Mình đang ở tòa B1A' },
+  { name: 'B2',            x: 29.9, y: 62,   status: 'Mình đang ở tòa B2' },
+  { name: 'A1',            x: 44.6, y: 58,   status: 'Mình đang ở tòa A1' },
+  { name: 'A2',            x: 47.1, y: 51,   status: 'Mình đang ở tòa A2' },
+  { name: 'A3',            x: 66.0, y: 54,   status: 'Mình đang ở tòa A3' },
+  { name: 'A4',            x: 49.8, y: 38,   status: 'Mình đang ở tòa A4' },
+  { name: 'Kiosk',         x: 42.3, y: 67,   status: 'Mình đang ở khu Kiosk' },
+  { name: 'B6',            x: 40.1, y: 27,   status: 'Mình đang ở tòa B6' },
+  { name: 'B8 · B9',       x: 59.5, y: 38,   status: 'Mình đang ở khu B8 – B9' },
+  { name: 'B10',           x: 73.5, y: 41,   status: 'Mình đang ở tòa B10' },
+  { name: 'C1',            x: 58.5, y: 20,   status: 'Mình đang ở tòa C1' },
+  { name: 'C2 · C3',       x: 72.9, y: 29,   status: 'Mình đang ở khu C2 – C3' },
+  { name: 'C4 · C5',       x: 72.9, y: 16,   status: 'Mình đang ở khu C4 – C5' },
+  { name: 'B7',            x: 84.0, y: 25,   status: 'Mình đang ở tòa B7' }
+];
+const GATES = [
+  { name: 'Cổng 1 (Lý Thường Kiệt)', x: 17.5, y: 44, status: 'Mình đang ra đón ở Cổng 1' },
+  { name: 'Cổng 2 (Tô Hiến Thành)',  x: 52.3, y: 68, status: 'Mình đang ra đón ở Cổng 2' },
+  { name: 'Cổng 3 (Tô Hiến Thành)',  x: 89.0, y: 57, status: 'Mình đang ra đón ở Cổng 3' }
+];
+const STATES = [
+  { name: '🚶 Tạm ra ngoài trường', mode: 'away', status: 'Mình đang tạm ra ngoài trường, sẽ quay lại sớm' },
+  { name: '🏠 Đã về, không còn ở trường', mode: 'gone', status: 'Mình đã về rồi, cảm ơn mọi người đã đến chung vui!' }
+];
+/* ========================================================== */
+
+const $ = id => document.getElementById(id);
+const isAdmin = new URLSearchParams(location.search).has('admin');
+if (isAdmin) { ['gui-xe','gui-div'].forEach(id => { const el = document.getElementById(id); if (el) el.classList.add('hidden'); }); }
+const configured = CONFIG.API_URL.startsWith('https://');
+let pending = null;        // vị trí đang chọn (chưa gửi)
+let current = null;        // vị trí đã lưu trên máy chủ
+
+
+function place(el, x, y){ el.style.left = x + '%'; el.style.top = y + '%'; el.classList.remove('hidden'); }
+
+function ago(t){
+  const m = Math.floor((Date.now() - t) / 60000);
+  if (m < 1) return 'vừa cập nhật';
+  if (m < 60) return 'cập nhật ' + m + ' phút trước';
+  const h = Math.floor(m / 60);
+  return 'cập nhật ' + h + ' giờ ' + (m % 60) + ' phút trước';
+}
+
+const OUT_TAG = /^\[(away|gone)\]\s*/;
+function getAdminKey(){ try { return localStorage.getItem('bk-admin-key') || ''; } catch (e) { return ''; } }
+function encodeOut(pos, base){
+  const txt = $('statusInput').value.trim();
+  if (pos.mode === 'away' || pos.mode === 'gone')
+    return { x: base.x, y: base.y, mode: 'here', hidden: false, status: '[' + pos.mode + '] ' + txt };
+  return { x: pos.x, y: pos.y, mode: pos.mode, status: txt, hidden: $('hideBox').checked };
+}
+function normalizeState(st){
+  if (!st || typeof st !== 'object') return st;
+  const m = typeof st.status === 'string' ? st.status.match(OUT_TAG) : null;
+  if (m){ st.mode = m[1]; st.status = st.status.replace(OUT_TAG, ''); st.hidden = false; }
+  return st;
+}
+function spotLabel(x, y){
+  let best = null, bd = Infinity;
+  for (const s of [...PLACES, ...GATES]) {
+    const d = Math.hypot(s.x - x, s.y - y);
+    if (d < bd) { bd = d; best = s; }
+  }
+  if (!best || bd > 6) return '';
+  return best.name.replace(/\s*\(.*\)$/, '');
+}
+function render(){
+  const dot = $('liveDot');
+  dot.className = 'bk-live-dot';
+  if (!configured){
+    $('liveText').textContent = 'Vị trí trực tiếp chưa được bật.';
+    $('liveTime').textContent = isAdmin ? 'Hãy dán link Apps Script vào CONFIG.API_URL trong index.html.' : '';
+    return;
+  }
+  if (!current || !current.t){
+    $('liveText').textContent = CONFIG.NAME + ' chưa chia sẻ vị trí.';
+    $('liveTime').textContent = '';
+    $('me').classList.add('hidden');
+    return;
+  }
+  if (current.hidden){
+    $('liveText').textContent = CONFIG.NAME + ' đang tạm ẩn vị trí.';
+    $('liveTime').textContent = ago(current.t);
+    $('me').classList.add('hidden');
+    return;
+  }
+  if (current.mode === 'away' || current.mode === 'gone'){
+    $('me').classList.add('hidden');
+    $('liveText').textContent = current.status || (current.mode === 'away' ? CONFIG.NAME + ' đang tạm ra ngoài trường.' : CONFIG.NAME + ' đã về.');
+    $('liveTime').textContent = ago(current.t);
+    dot.classList.add(current.mode);
+    return;
+  }
+  place($('me'), current.x, current.y);
+  const lab = spotLabel(current.x, current.y);
+  $('me').querySelector('b').textContent = lab ? 'Mình · ' + lab : 'Mình';
+  $('liveText').textContent = current.status || (CONFIG.NAME + ' đang ở vị trí trên bản đồ');
+  const stale = (Date.now() - current.t) > CONFIG.STALE_MINUTES * 60000;
+  $('liveTime').textContent = ago(current.t) + (stale ? ' · có thể mình đã đi chỗ khác' : '');
+  dot.classList.add(stale ? 'stale' : 'live');
+}
+
+async function load(){
+  if (!configured){ render(); return; }
+  try{
+    const r = await fetch(CONFIG.API_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    current = normalizeState(await r.json());
+  }catch(e){
+    $('liveTime').textContent = 'Không tải được vị trí, sẽ thử lại…';
+    return;
+  }
+  render();
+}
+
+load();
+setInterval(load, CONFIG.REFRESH_SECONDS * 1000);
+setInterval(render, 30000); // cập nhật dòng "x phút trước"
+document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
+
+/* ---------- Chế độ quản lý (chỉ khi link có ?admin) ---------- */
+if (isAdmin){
+  $('panel').classList.remove('hidden');
+  const keyInput = $('adminKey');
+  /* Đăng nhập một lần: mật khẩu được nhớ trên máy này, không phải nhập lại */
+  const keyRefresh = () => {
+    const logged = !!getAdminKey();
+    $('keyStatus').textContent = logged
+      ? '✅ Đã đăng nhập trên máy này, không cần nhập lại.'
+      : 'Nhập mật khẩu quản lý một lần để đăng nhập trên máy này.';
+    $('keySave').textContent = logged ? 'Đăng xuất' : 'Đăng nhập';
+    keyInput.value = '';
+    keyInput.classList.toggle('hidden', logged);
+    $('keyLabel').classList.toggle('hidden', logged);
+  };
+  $('keySave').addEventListener('click', () => {
+    if (getAdminKey()) { try { localStorage.removeItem('bk-admin-key'); } catch (e) {} keyRefresh(); return; }
+    const k = keyInput.value.trim();
+    if (!k) { $('msg').textContent = 'Nhập mật khẩu quản lý trước.'; $('msg').className = 'bk-msg err'; return; }
+    try { localStorage.setItem('bk-admin-key', k); } catch (e) {}
+    keyRefresh();
+  });
+  keyRefresh();
+
+  function chip(container, item, isState, isKey){
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'bk-chip' + (isState ? ' bk-chip--state' : '') + (isKey ? ' bk-chip--key' : ''); b.textContent = (isKey ? '★ ' : '') + item.name;
+    b.onclick = () => {
+      document.querySelectorAll('.bk-chip').forEach(c => c.classList.remove('on'));
+      b.classList.add('on');
+      $('statusInput').value = item.status;
+      if (isState){
+        pending = { mode: item.mode };
+        $('ghost').classList.add('hidden');
+      } else {
+        pending = { x: item.x, y: item.y, mode: 'here' };
+        place($('ghost'), item.x, item.y);
+      }
+      $('sendBtn').disabled = false;
+      $('msg').textContent = 'Đã chọn “' + item.name + '”. Bấm “Cập nhật” để khách thấy.'; $('msg').className = 'bk-msg';
+    };
+    $(container).appendChild(b);
+  }
+  const dragChip = document.createElement('button');
+  dragChip.type = 'button'; dragChip.className = 'bk-chip bk-chip--drag'; dragChip.textContent = '✋ Kéo thả trên bản đồ';
+  dragChip.onclick = () => {
+    document.querySelectorAll('.bk-chip').forEach(c => c.classList.remove('on'));
+    dragChip.classList.add('on');
+    const start = (pending && pending.x != null) ? pending
+                : (current && current.mode === 'here' && current.x != null) ? current : { x: 50, y: 45 };
+    pending = { x: start.x, y: start.y, mode: 'here' };
+    place($('ghost'), pending.x, pending.y);
+    $('statusInput').value = '';
+    $('sendBtn').disabled = false;
+    $('msg').textContent = 'Kéo marker xanh đến chỗ bạn đang đứng, rồi bấm “Cập nhật”.'; $('msg').className = 'bk-msg';
+    $('campusMap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+  $('chipsPlaces').appendChild(dragChip);
+  const KEY_SPOTS = ['Hội trường A5', 'Sân bóng', 'B1'];
+  PLACES.forEach(p => chip(KEY_SPOTS.includes(p.name) ? 'chipsKey' : 'chipsPlaces', p, false, KEY_SPOTS.includes(p.name)));
+  GATES.forEach(p => chip('chipsGates', p));
+  STATES.forEach(p => chip('chipsStates', p, true));
+
+  $('campusMap').style.cursor = 'crosshair';
+  /* Kéo thả marker xanh */
+  const ghost = $('ghost');
+  ghost.classList.add('bk-drag');
+  let drag = null;
+  ghost.addEventListener('pointerdown', e => {
+    const g = ghost.getBoundingClientRect();
+    drag = { dx: e.clientX - (g.left + g.width / 2), dy: e.clientY - g.bottom, moved: false };
+    ghost.setPointerCapture(e.pointerId);
+    ghost.classList.add('grabbing');
+    e.preventDefault();
+  });
+  ghost.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const r = $('mapImg').getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((e.clientX - drag.dx - r.left) / r.width) * 100));
+    const y = Math.max(0, Math.min(100, ((e.clientY - drag.dy - r.top) / r.height) * 100));
+    pending = { x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10, mode: 'here' };
+    ghost.style.left = pending.x + '%'; ghost.style.top = pending.y + '%';
+    drag.moved = true;
+  });
+  const endDrag = () => {
+    if (!drag) return;
+    const moved = drag.moved; drag = null;
+    ghost.classList.remove('grabbing');
+    if (moved){
+      $('sendBtn').disabled = false;
+      $('msg').textContent = 'Đã đặt marker. Bấm “Cập nhật” để khách thấy.'; $('msg').className = 'bk-msg';
+    }
+  };
+  ghost.addEventListener('pointerup', endDrag);
+  ghost.addEventListener('pointercancel', endDrag);
+
+  $('campusMap').addEventListener('click', e => {
+    if (e.target.closest('#ghost')) return;
+    const r = $('mapImg').getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 100;
+    const y = ((e.clientY - r.top) / r.height) * 100;
+    pending = { x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10, mode: 'here' };
+    document.querySelectorAll('.bk-chip').forEach(c => c.classList.remove('on'));
+    place($('ghost'), pending.x, pending.y);
+    $('sendBtn').disabled = false;
+    $('msg').textContent = 'Đã chọn điểm mới. Bấm “Cập nhật” để khách thấy.'; $('msg').className = 'bk-msg';
+  });
+
+  $('hideBox').addEventListener('change', () => { $('sendBtn').disabled = false; });
+
+  $('sendBtn').addEventListener('click', async () => {
+    if (!configured){ $('msg').textContent = 'Chưa dán link Apps Script vào CONFIG.API_URL.'; $('msg').className = 'bk-msg err'; return; }
+    const base = current && current.x != null ? current : { x: 50, y: 50 };
+    const pos = Object.assign({ x: base.x, y: base.y, mode: (current && current.mode) || 'here' }, pending || {});
+    if (!getAdminKey()){ $('msg').textContent = 'Nhập mật khẩu quản lý ở phía trên trước.'; $('msg').className = 'bk-msg err'; return; }
+    $('sendBtn').disabled = true; $('msg').textContent = 'Đang gửi…'; $('msg').className = 'bk-msg';
+    try{
+      const r = await fetch(CONFIG.API_URL, {
+        method: 'POST',
+        body: JSON.stringify(Object.assign(encodeOut(pos, base), { key: getAdminKey() }))
+      });
+      const res = await r.json();
+      if (!res.ok){
+        if (res.error === 'auth') {
+          try { localStorage.removeItem('bk-admin-key'); } catch (e) {}
+          keyRefresh();
+        }
+        $('msg').textContent = res.error === 'auth'
+          ? 'Mật khẩu quản lý không đúng. Nhập lại ở phía trên nhé.'
+          : 'Không lưu được, thử lại nhé.';
+        $('msg').className = 'bk-msg err';
+        $('sendBtn').disabled = false; return;
+      }
+      current = normalizeState(res.state); pending = null;
+      $('ghost').classList.add('hidden');
+      render();
+      $('msg').textContent = 'Đã cập nhật! Khách sẽ thấy trong vòng ' + CONFIG.REFRESH_SECONDS + ' giây.'; $('msg').className = 'bk-msg ok';
+    }catch(e){
+      $('msg').textContent = 'Lỗi mạng, thử lại nhé.'; $('msg').className = 'bk-msg err';
+      $('sendBtn').disabled = false;
+    }
+  });
+
+}
+
+/* ===== Chụp ảnh thiệp để gửi (chỉ trong ?admin) ===== */
+let gShotBlob = null, gShotUrl = null;
+function shotSay(text, cls){ const m = $('shotMsg'); m.textContent = text; m.className = 'bk-msg' + (cls ? ' ' + cls : ''); }
+async function captureCard(){
+  if (typeof html2canvas !== 'function') throw new Error('no-lib');
+  const card = document.querySelector('article.bk-card');
+  const imgs = [...document.querySelectorAll('img[data-capture-src]')];
+  const original = imgs.map(i => i.getAttribute('src'));
+  /* Chỉ chụp phần thư mời: bỏ nút bấm và phần bản đồ trực tiếp */
+  const liveSec = document.getElementById('ban-do');
+  const hideList = [];
+  const actions = card.querySelector('.bk-actions');
+  if (actions) hideList.push(actions);
+  if (liveSec) {
+    const prev = liveSec.previousElementSibling;
+    if (prev && prev.classList.contains('bk-divider')) hideList.push(prev);
+    hideList.push(liveSec);
+    for (let n = liveSec.nextElementSibling; n; n = n.nextElementSibling) hideList.push(n);
+  }
+  hideList.forEach(e => e.style.display = 'none');
+  try {
+    imgs.forEach(i => i.setAttribute('src', i.dataset.captureSrc));
+    await Promise.all(imgs.map(i => new Promise(r => {
+      if (i.complete && i.naturalWidth) return r();
+      i.addEventListener('load', r, { once: true }); i.addEventListener('error', r, { once: true });
+    })));
+    return await captureWith(card);
+  } finally {
+    imgs.forEach((i, k) => i.setAttribute('src', original[k]));
+    hideList.forEach(e => e.style.display = '');
+  }
+}
+async function captureWith(card){
+  const canvas = await html2canvas(card, {
+    scale: 2, useCORS: true, backgroundColor: '#FFFFFF', logging: false,
+    ignoreElements: el => el.classList && (el.classList.contains('bk-actions') || el.classList.contains('bk-center'))
+  });
+  return await new Promise((res, rej) => canvas.toBlob(b => b ? res(b) : rej(new Error('blob')), 'image/png'));
+}
+$('shotBtn').addEventListener('click', async () => {
+  $('shotBtn').disabled = true; shotSay('Đang chụp ảnh, chờ một chút…', '');
+  try {
+    const blob = await captureCard();
+    if (gShotUrl) URL.revokeObjectURL(gShotUrl);
+    gShotBlob = blob; gShotUrl = URL.createObjectURL(blob);
+    $('shotImg').src = gShotUrl;
+    $('shotDl').href = gShotUrl;
+    $('shotBox').classList.remove('hidden');
+    let canShareFiles = false;
+    try { canShareFiles = !!(navigator.canShare && navigator.canShare({ files: [new File([blob], 'thiep.png', { type: 'image/png' })] })); } catch (e) {}
+    $('shotShare').classList.toggle('hidden', !canShareFiles);
+    shotSay('Đã chụp xong. Bấm “Tải ảnh” để lưu, hoặc “Gửi ảnh” trên điện thoại.', 'ok');
+  } catch (e) {
+    shotSay(e.message === 'no-lib'
+      ? 'Chưa tải được công cụ chụp ảnh. Kiểm tra kết nối mạng rồi thử lại.'
+      : 'Không chụp được ảnh. Thử lại, hoặc dùng chức năng chụp màn hình của điện thoại.', 'err');
+  } finally { $('shotBtn').disabled = false; }
+});
+$('shotShare').addEventListener('click', async () => {
+  if (!gShotBlob) return;
+  try { await navigator.share({ files: [new File([gShotBlob], 'thiep-tot-nghiep.png', { type: 'image/png' })], title: 'Thư mời Lễ Tốt nghiệp' }); }
+  catch (e) {}
+});
+</script>
+</body>
+</html>
 
